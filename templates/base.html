@@ -1,0 +1,21 @@
+{% load static %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Solar {% endblock %}</title>
+    {% tailwind_css %}
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<nav class="bg-green-600 text-white p-4">
+    <h1 class="text-xl font-bold">Solar </h1>
+</nav>
+
+<main class="p-6">
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>
