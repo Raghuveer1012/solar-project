@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     # local apps
     "core",
     "tailwind",
@@ -53,7 +52,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-
     # local taiwind middleware
     "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
@@ -134,8 +132,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # local settigs
 
-# taiwind 
-TAILWIND_APP_NAME = 'theme' # This is the name of the app that will be used to generate the tailwind files
-INTERNAL_IPS = ['127.0.0.1']
+# taiwind
+TAILWIND_APP_NAME = "theme"  # This is the name of the app that will be used to generate the tailwind files
+INTERNAL_IPS = ["127.0.0.1"]
 
-NPM_BIN_PATH="/home/raghu/.nvm/versions/node/v24.12.0/bin/node"
+NPM_BIN_PATH = "/home/raghu/.nvm/versions/node/v24.12.0/bin/node"

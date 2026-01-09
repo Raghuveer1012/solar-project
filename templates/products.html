@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Our Products | Kartavya Solar Amreli{% endblock %}
+
+{% block content %}
+
+<section class="bg-blue-950 pt-32 pb-20 relative overflow-hidden text-center">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <h1 class="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">Advanced <span class="text-orange-500">Solar Products</span></h1>
+        <p class="text-blue-100/70 max-w-2xl mx-auto text-lg">
+            High-rated solar energy solutions designed for efficiency, durability, and a healthier environment.
+        </p>
+    </div>
+</section>
+
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 space-y-32">
+        
+        <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
+            <div>
+                <h2 class="text-3xl font-black text-blue-950 mb-6 uppercase italic">Solar Water Heater</h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Our solar water heaters feature high-grade marine coating and high-density PUF insulation to ensure maximum heat retention and tank longevity.
+                </p>
+                
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-100 shadow-sm">
+                    <h4 class="font-bold text-orange-600 uppercase text-xs tracking-widest mb-4">Technical Specifications</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="text-gray-500">Inner Tank</span>
+                            <span class="font-bold text-blue-950">2.5 mm Galvanized iron </span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="text-gray-500">Insulation</span>
+                            <span class="font-bold text-blue-950">50 mm High-density PUF </span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="text-gray-500">Outer Shell</span>
+                            <span class="font-bold text-blue-950">0.5 mm Galvanized iron </span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="text-gray-500">Stand</span>
+                            <span class="font-bold text-blue-950">1.5 mm GI Power Coated </span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-500">Backup</span>
+                            <span class="font-bold text-blue-950">Provision for Electric Backup </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-slate-50">
+                <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&q=80&w=800" alt="Solar Water Heater">
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
+            <div class="lg:order-last">
+                <h2 class="text-3xl font-black text-blue-950 mb-6 uppercase italic">Cleaning Sprinkler & Automation</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Founded by environmentally conscious entrepreneurs, our fully automatic cleaning systems maximize the efficiency and longevity of your solar panels.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-orange-500 shrink-0 w-5 h-5"></i>
+                        <span class="text-gray-700 font-medium">Fully automatic solar panel cleaning system.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-orange-500 shrink-0 w-5 h-5"></i>
+                        <span class="text-gray-700 font-medium">Utilizes automation controllers to remove dust and debris.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-orange-500 shrink-0 w-5 h-5"></i>
+                        <span class="text-gray-700 font-medium">Ensures optimal performance through regular cleaning.</span>
+                    </li>
+                </ul>
+                <a href="{% url 'contact' %}" class="inline-flex items-center gap-2 bg-blue-950 text-white px-8 py-4 rounded-xl font-bold hover:bg-orange-600 transition-colors uppercase text-sm tracking-widest">
+                    Request Pricing <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-slate-50">
+                <img src="https://images.unsplash.com/photo-1509391366360-feaffa64d18b?auto=format&fit=crop&q=80&w=800" alt="Automation Controller">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-black text-blue-950 mb-4 uppercase italic">Custom Solutions</h3>
+        <p class="text-gray-500 leading-relaxed italic">
+            "We pride ourselves on creating custom solar energy solutions that fit the specific needs of your commercial building".
+        </p>
+    </div>
+</section>
+
+{% endblock %}

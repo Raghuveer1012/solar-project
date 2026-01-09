@@ -16,11 +16,11 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path,include
-from core.views import home
+from django.urls import path, include
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("",home,name='home'),
+    path("", include("core.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

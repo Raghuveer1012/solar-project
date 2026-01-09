@@ -1,12 +1,159 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Kartavya Solar | Leading Solar EPC Company in Amreli, Gujarat{% endblock %}
 
 {% block content %}
-<h1 class="text-4xl font-bold text-green-700">
-    Soler 
-</h1>
-<p class="mt-4 text-lg">
-    This is our first project
-</p>
+
+<section class="relative min-h-[90vh] flex items-center bg-blue-950 overflow-hidden">
+  <div class="absolute inset-0 opacity-40">
+    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=1920" 
+         class="w-full h-full object-cover" alt="Kartavya Solar Farm">
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center pt-20">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 bg-orange-600/10 border border-orange-600/20 text-orange-500 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+        </span>
+        Dealers Welcome PAN India
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-6">
+        Let the <span class="text-orange-500">Sun</span> <br> Pay Your Bill.
+      </h1>
+      <p class="text-lg text-blue-100/80 mb-10 max-w-lg leading-relaxed">
+        Custom solar energy solutions for MSMEs, Homes & Large Enterprises. Reduce your energy budget with sustainable, non-polluting power.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="{% url 'contact' %}" class="bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-700 hover:shadow-2xl hover:shadow-orange-500/30 transition-all flex items-center gap-3">
+          Free Consultation <i data-lucide="chevron-right"></i>
+        </a>
+        <a href="{% url 'about' %}" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">
+          Our Mission
+        </a>
+      </div>
+    </div>
+    
+    <div class="hidden md:block reveal delay-300">
+      <div class="relative">
+        <div class="absolute -inset-4 bg-orange-500/20 blur-3xl rounded-full"></div>
+        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&q=80&w=800" 
+             alt="Kartavya Solar Panel Installation" 
+             class="relative rounded-3xl shadow-2xl border border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-700">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bg-white py-12 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+       <div class="flex flex-col items-center border-r border-gray-100 last:border-0">
+          <span class="text-3xl font-black text-blue-950">3000+</span>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-orange-600 text-center">Tons CO2 Abated (MSMEs)</span>
+       </div>
+       <div class="flex flex-col items-center border-r border-gray-100 last:border-0">
+          <span class="text-3xl font-black text-blue-950">5000+</span>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-orange-600 text-center">Trees Planted Equivalent</span>
+       </div>
+       <div class="flex flex-col items-center border-r border-gray-100 last:border-0">
+          <span class="text-3xl font-black text-blue-950">25 Years</span>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-orange-600 text-center">Performance Support</span>
+       </div>
+       <div class="flex flex-col items-center">
+          <span class="text-3xl font-black text-blue-950">PAN INDIA</span>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-orange-600 text-center">Dealer Network</span>
+       </div>
+    </div>
+  </div>
+</div>
+
+<section class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <div class="max-w-2xl">
+        <h2 class="text-orange-600 font-bold uppercase tracking-[0.2em] text-sm mb-4">Our Services</h2>
+        <h3 class="text-4xl md:text-5xl font-black text-blue-950 leading-tight">Advanced Energy Solutions</h3>
+      </div>
+      <p class="text-gray-500 max-w-sm pb-2">From government liaison and paperwork to high-tech cleaning automation, we handle it all.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="group bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal relative overflow-hidden">
+        <div class="w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-transform">
+          <i data-lucide="building-2" class="w-7 h-7"></i>
+        </div>
+        <h4 class="text-2xl font-bold text-blue-950 mb-4">Rooftop Plants</h4>
+        <p class="text-gray-500 leading-relaxed mb-8">Custom solar energy solutions for commercial, industrial, and residential buildings with IGBC/LEED certification points.</p>
+        <ul class="space-y-3 mb-8 text-sm font-semibold text-blue-950">
+           <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-orange-500"></i> MSME & Enterprise Focused</li>
+           <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-orange-500"></i> Un-utilized Space Optimization</li>
+        </ul>
+        <a href="{% url 'contact' %}" class="inline-flex items-center gap-2 font-bold text-orange-600 group-hover:gap-4 transition-all">Learn More <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      </div>
+
+      <div class="group bg-blue-950 p-10 rounded-[2rem] shadow-xl reveal delay-100 relative overflow-hidden text-white">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-bl-full"></div>
+        <div class="w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center mb-8">
+          <i data-lucide="droplets" class="w-7 h-7"></i>
+        </div>
+        <h4 class="text-2xl font-bold mb-4">Cleaning & Automation</h4>
+        <p class="text-blue-100/60 leading-relaxed mb-8">Maximize efficiency with our automatic cleaning sprinklers and controllers. Removes dust and debris ensuring optimal performance.</p>
+        <ul class="space-y-3 mb-8 text-sm font-semibold">
+           <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-orange-500"></i> Fully Automatic Controllers</li>
+           <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-orange-500"></i> Increased System Longevity</li>
+        </ul>
+        <a href="{% url 'contact' %}" class="inline-flex items-center gap-2 font-bold text-orange-500">Get Automation <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      </div>
+
+      <div class="group bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal delay-200">
+        <div class="w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:scale-110 transition-transform">
+          <i data-lucide="thermometer-sun" class="w-7 h-7"></i>
+        </div>
+        <h4 class="text-2xl font-bold text-blue-950 mb-4">Solar Water Heater</h4>
+        <p class="text-gray-500 leading-relaxed mb-8">Premium 2.5mm Galvanized Iron tanks with High Grade Marine Coating and PUF insulation for maximum heat retention.</p>
+        <ul class="space-y-3 mb-8 text-sm font-semibold text-blue-950">
+           <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-orange-500"></i> Marine Grade Coating</li>
+           <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-orange-500"></i> Electric Backup Provision</li>
+        </ul>
+        <a href="{% url 'contact' %}" class="inline-flex items-center gap-2 font-bold text-orange-600 group-hover:gap-4 transition-all">View Specs <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-blue-950 rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-orange-600 transform skew-x-12 translate-x-32 hidden lg:block"></div>
+      
+      <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-6">Expert Liaison & <br>Paperwork Support</h2>
+          <p class="text-blue-100/70 text-lg mb-8">
+            Navigating government policies can be complex. From MNRE to local state solar policies, we handle all approvals and liaison work so you can focus on your business.
+          </p>
+          <div class="space-y-4 mb-10">
+            <div class="flex items-center gap-4 text-white font-semibold">
+              <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-orange-500"><i data-lucide="file-check" class="w-5 h-5"></i></div>
+              All Govt. Approvals Handled
+            </div>
+            <div class="flex items-center gap-4 text-white font-semibold">
+              <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-orange-500"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+              Based in Amreli, Serving PAN India
+            </div>
+          </div>
+          <a href="{% url 'contact' %}" class="inline-block bg-white text-blue-950 px-10 py-4 rounded-xl font-bold hover:bg-orange-500 hover:text-white transition-all">Get Professional Advice</a>
+        </div>
+        <div class="reveal delay-200">
+           <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80&w=800" 
+                class="rounded-3xl shadow-2xl border-4 border-white/10" alt="Kartavya Solar Amreli Project">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
