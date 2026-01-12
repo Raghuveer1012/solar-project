@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     # local apps
     "core",
     "accounts",
@@ -48,7 +47,7 @@ INSTALLED_APPS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTH_USER_MODEL = "accounts.CustomUser"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -145,7 +144,7 @@ INTERNAL_IPS = ["127.0.0.1"]
 NPM_BIN_PATH = "/home/raghu/.nvm/versions/node/v24.12.0/bin/node"
 
 # Email Configuration (for development)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # For production, use SMTP instead (example):
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
