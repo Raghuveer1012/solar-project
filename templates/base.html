@@ -11,12 +11,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
-        
-        /* Dropdown Animation */
         .dropdown-menu { display: none; opacity: 0; transform: translateY(12px); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
         .dropdown-menu.show { display: block; opacity: 1; transform: translateY(0); }
-        
-        /* Mobile Menu */
         #mobileMenu { transition: all 0.3s ease-in-out; max-height: 0; overflow: hidden; opacity: 0; }
         #mobileMenu.open { max-height: 600px; opacity: 1; padding-bottom: 2rem; }
     </style>
@@ -38,7 +34,7 @@
                 <div class="flex items-center gap-8 pr-4">
                     <a href="{% url 'home' %}" class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-orange-600 transition-colors">Home</a>
                     <a href="{% url 'about' %}" class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-orange-600 transition-colors">About</a>
-                    <a href="{% url 'products' %}" class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-orange-600 transition-colors">Products</a>
+                    <a href="{% url 'product_list' %}" class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-orange-600 transition-colors">Products</a>
                     <a href="{% url 'contact' %}" class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-orange-600 transition-colors">Contact</a>
                 </div>
 
@@ -94,7 +90,7 @@
             <div class="h-px bg-slate-100 mb-2"></div>
             <a href="{% url 'home' %}" class="text-[11px] font-black uppercase tracking-widest text-slate-500 px-2 py-2">Home</a>
             <a href="{% url 'about' %}" class="text-[11px] font-black uppercase tracking-widest text-slate-500 px-2 py-2">About Us</a>
-            <a href="{% url 'products' %}" class="text-[11px] font-black uppercase tracking-widest text-slate-500 px-2 py-2">Products</a>
+            <a href="{% url 'product_list' %}" class="text-[11px] font-black uppercase tracking-widest text-slate-500 px-2 py-2">Products</a>
             <a href="{% url 'contact' %}" class="text-[11px] font-black uppercase tracking-widest text-slate-500 px-2 py-2">Contact</a>
             
             <div class="pt-6 flex flex-col gap-3">
@@ -137,7 +133,7 @@
                 <ul class="space-y-4">
                     <li><a href="{% url 'home' %}" class="text-slate-400 hover:text-white text-sm font-bold transition-colors">Home</a></li>
                     <li><a href="{% url 'about' %}" class="text-slate-400 hover:text-white text-sm font-bold transition-colors">History</a></li>
-                    <li><a href="{% url 'products' %}" class="text-slate-400 hover:text-white text-sm font-bold transition-colors">Solar Units</a></li>
+                    <li><a href="{% url 'product_list' %}" class="text-slate-400 hover:text-white text-sm font-bold transition-colors">Solar Units</a></li>
                 </ul>
             </div>
 
@@ -172,7 +168,6 @@
 <script>
     lucide.createIcons();
     
-    // Toggle Desktop Profile Menu
     const pBtn = document.getElementById('profileBtn');
     const pMenu = document.getElementById('profileMenu');
     if(pBtn) {
@@ -182,7 +177,6 @@
         };
     }
 
-    // Toggle Mobile Navigation
     const mobBtn = document.getElementById('mobileMenuBtn');
     const mobMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
@@ -196,7 +190,6 @@
         };
     }
 
-    // Handle Clicks Outside
     document.onclick = (e) => {
         if (pMenu && !pBtn.contains(e.target)) pMenu.classList.remove('show');
     };

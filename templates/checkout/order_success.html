@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Order Success{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">Thank you for your order!</h2>
+    <p class="mb-6">Your order has been placed successfully. Our team will contact you shortly.</p>
+    <a href="{% url 'product_list' %}" class="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-all">Continue Shopping</a>
+</div>
+{% endblock %}
