@@ -1,18 +1,21 @@
 from django.db import models
 from django.conf import settings
 from django.urls import reverse
-
-
-from django.db import models
-from django.urls import reverse
+from django.core.validators import MinValueValidator
+from decimal import Decimal
 
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.DecimalField(
+        max_digits=10, decimal_places=2, validators=[MinValueValidator(Decimal("0.01"))]
+    )
     image = models.ImageField(upload_to="products/", default="products/default.png")
     is_active = models.BooleanField(default=True)
+    stock_quantity = models.IntegerField(default=0)
+    min_order_quantity = models.PositiveIntegerField(default=1)
+    max_order_quantity = models.PositiveIntegerField(null=True, blank=True)
     slug = models.SlugField(
         unique=True, null=True, blank=True
     )  # <-- add null=True and blank=True for existing rows
